@@ -29,7 +29,9 @@ yuyo.addTrick('rolls')
 print(yuyo.tricks)
 
 
-print('/n VERY SIMPLE CLASS')
+print('\n\n VERY SIMPLE CLASS')
+print('--------------------')
+
 class Car:
     size  = 'large'
     wb    = 3.0
@@ -44,3 +46,9 @@ wb = 1.9
 mass = 800
 doors = 2
 celica.use = 'racing'
+
+print(celica.size)
+print(celica.wb)
+print(celica.mass)
+print(celica.doors)
+print(celica.use)
