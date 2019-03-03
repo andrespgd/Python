@@ -1,23 +1,16 @@
 class Dog:
-    
-    kind = 'canine'
-    
+    kind = 'canine' 
     tricks = []
-    
     def __init__(self,name,age):
         self.name = name
-        self.age = age
-        
+        self.age = age   
     def getName(self):
-        return self.name
-        
+        return self.name      
     def getAge(self):
-        return self.age
-        
+        return self.age     
     def addTrick(self,trick):
         self.tricks.append(trick)
-        
-        
+           
 yuyo = Dog('yuyo', 10)
 
 print(yuyo.getName())
