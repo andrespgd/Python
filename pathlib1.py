@@ -1,6 +1,7 @@
 import pathlib
 
-print('\nCREATE PATHS - Can be paths or files')
+
+print('\n\nCREATE PATHS - Can be paths or files')
 print('--------------------------------------')
 
 p0 = pathlib.Path.cwd()
@@ -15,20 +16,32 @@ print(p0)
 print(p1)
 print(p2)
 print(p3)
+print()
+print(p1.is_file())
+print(p1.is_dir())
+print(p1.exists())
 
 
-print('\nREADING FILES')
+
+print('\n\nREADING FILES')
 print('-------------')
 
 path = pathlib.Path.cwd() / 'pathlib1_test.txt'
 path.read_text()
-
 # OR
-
 pathlib.Path('pathlib1_test.txt').read_text()
+print(pathlib.Path('pathlib1_test.txt').is_file())
+print()
+
+for one_line in path.open():
+    print(one_line, end='')
+
+print('\n')
+print(path.stat().st_size, 'size in bytes')
 
 
-print('\nCONFIRM PATH')
+
+print('\n\nCONFIRM PATH')
 print('-------------')
 
 path = pathlib.Path('pathlib1_test.txt')
@@ -40,7 +53,8 @@ path.resolve().parent == pathlib.Path.cwd()
 print(path.resolve().parent == pathlib.Path.cwd())
 
 
-print('\nPATH COMPONENTS')
+
+print('\n\nPATH COMPONENTS')
 print('-------------')
 
 path = pathlib.Path('pathlib1_test.txt')
@@ -52,7 +66,9 @@ print(path.parent)
 print(path.parent.parent)
 print(path.anchor)
 
-print('\nDISPLAY DIRECTORY TREE')
+
+
+print('\n\nDISPLAY DIRECTORY TREE')
 print('-------------')
 
 def print_tree(dir):
@@ -63,3 +79,18 @@ def print_tree(dir):
         print(f'{spacer}+ {path.name}')
         
 print_tree(pathlib.Path.cwd())
+
+
+
+print('\n\nPATH COMPONENTS')
+print('-------------')
+
+p = pathlib.Path('.')
+p.iterdir()
+
+import glob
+glob.glob('*.py')
+
+p.glob('*.py')
+for one_item in p.glob('*.py'):
+    print(f"{one_item}: {type(one_item)}")
