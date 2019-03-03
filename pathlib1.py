@@ -94,3 +94,15 @@ glob.glob('*.py')
 p.glob('*.py')
 for one_item in p.glob('*.py'):
     print(f"{one_item}: {type(one_item)}")
+
+    
+    
+
+print('\n\nFIND ALL FILES OF a KIND')
+print('-------------')
+
+top_level_csv_files = Path.cwd().glob('*.txt')
+all_csv_files = Path.cwd().rglob('*.txt')
+
+for i in all_csv_files:
+    print(i)
