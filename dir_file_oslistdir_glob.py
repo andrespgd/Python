@@ -26,3 +26,4 @@ files2 = [i for i in files1 if (i.endswith('.txt') and '3' in i)]
 
 # 3B - search for a list of files using GLOB - the whole path and filename
 files3 = glob.glob(dir_path + '\*3*.txt')
+
