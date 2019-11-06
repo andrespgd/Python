@@ -11,9 +11,9 @@ chmod 755 Anaconda3-2019.07-Linux-x86_64.sh
 
 # update Conda
 
->>conda --version
+conda --version
 
->>conda update conda
+conda update conda
 
 
 
