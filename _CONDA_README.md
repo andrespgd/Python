@@ -1,4 +1,4 @@
-# conda for Linux 
+# Conda for Linux 
 
 1- download .sh from Anaconda site
 
@@ -8,6 +8,13 @@ chmod 755 Anaconda3-2019.07-Linux-x86_64.sh
 3-
 ./Anaconda3-2019.07-Linux-x86_64.sh
 >will install ./anaconda3/bin/conda
+
+# update Conda
+
+>>conda --version
+
+>>conda update conda
+
 
 
 # create a python3.7 environment
