@@ -134,7 +134,7 @@ plt.show()
 from sklearn.model_selection import train_test_split
 
 # Specify the data 
-X=wines.ix[:,0:11]
+X=wines.iloc[:,0:11]
 
 # Specify the target labels and flatten the array 
 y=np.ravel(wines.type)
@@ -283,7 +283,7 @@ print(mse_value)
 print(mae_value)
 
 from sklearn.metrics import r2_score
-r2_score(y[test], y_pred)
+r2_score(y_test, y_pred)
 
 
 ############# MODEL FINE-TUNING #############
