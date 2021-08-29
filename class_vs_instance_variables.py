@@ -1,4 +1,5 @@
 '''
+CLASS
 -instance variable convention: use lowercase_with_underscore or initialLowerWithCaps
 -class name convention: InitialCaps 
 '''
@@ -22,7 +23,13 @@ h2 = House('2nd st', 2000,   ['sunroom', 'garage'])
 h3 = House('3rd st', 3000.0, [])
 h3.add_additions('second_room')
 
-# instance variables
+
+print()
+print('--instance type--')
+print(type(h1)) 
+
+print()
+print('--instance variables--')
 print(dir(h1)) # all attributes
 print(vars(h1).keys()) # instance variables keys
 print(vars(h1)) # instance variables
@@ -30,8 +37,16 @@ print(vars(h1)) # instance variables
 print(h1.__dict__.keys())
 print(h1.size) # specific instance variable
 
-# instance type
-print(type(h1)) # type of class
+print()
+print('--class variables--')
+print(h1.market, h2.market, h3.market)
+print(House.market)
+House.market = 'up'
+print(h1.market, h2.market, h3.market)
+print(House.market)
+h1.market = 'down'
+print(h1.market, h2.market, h3.market)
+print(House.market)
 
 
 
