@@ -70,4 +70,51 @@ myFun('geeks',' for', 'geeks', first="Geeks", mid="for", last="Geeks")
 
 
 
+#################################  EDIT
+
+class Foo1:
+    def __init__(self, **kwargs):
+        self.a = kwargs['a']
+        self.b = kwargs['b']
+
+foo1 = Foo1(a=1, b=2)
+print(foo1.a)  # 1
+print(foo1.b)  # 2
+print(foo1.__dict__)  # {'a': 1, 'b': 2}
+
+
+class MathematicalModel:
+    def __init__(self, var1, var2, var3, **kwargs):
+        self.var1 = var1
+        self.var2 = var2
+        self.var3 = var3
+        self.__dict__.update(kwargs)  # Store all the extra variables
+
+#################################  EDIT
+
+def connect(**kwargs):
+    print(type(kwargs))
+    print(kwargs)
+	
+	
+connect() 
+# <class 'dict'>
+# {}
+
+connect(server='localhost', port=3306, user='root', password='Py1hon!Xt')
+# <class 'dict'>
+# {'server': 'localhost', 'port': 3306, 'user': 'root', 'password': 'Py1hon!Xt'}
+
+# If you want to pass a dictionary to the function, you need to add two stars (**) to the argument like this:
+
+def connect(**kwargs):
+    print(kwargs)
+
+config = {'server': 'localhost',
+        'port': 3306,
+        'user': 'root',
+        'password': 'Py1thon!Xt12'}
+
+connect(**config)
+
 
