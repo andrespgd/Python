@@ -1,76 +1,82 @@
-def add(a, b,c):
-    print(a+b+c)
-     
-add(2,3,4)
-print() 
- 
-
-### args ###
+print('---------- args -------------')
 
 def add(*args):
     total = 0
     for arg in args:
         total+=arg
-    print(total)
+    print('the sum of', *args, 'is =', total)
     
 add(2,3,4)
-add(2,3,4,6,7,9)
 print()
-
 
 
 def func(*args):
     for arg in args:
         print(arg)
  
-l = [11,3,4,5,"tuts"]
+l = [11,3,4,5,'tuts']
+print('This prints the list as one item:')
 func(l)
-print('This prints the list as a whole, because its interpreting the list as one item.')
-print()
+print('* unpacks the list and outputs each individual item:')
 func(*l)
-print('The * will unpack the list and output each individual list item.')
 print()
 
 
 
-### Kwargs ###
+print('---------- Kwargs -------------')
 '''
-Kwargs uses value pairs, notation is double asterisk (**)
+-uses value pairs
+-notation is **
 '''
 
-def myFun(**kwargs):
+def myFun1(**kwargs):
     for key, value in kwargs.items():
-        print ("%s == %s" %(key, value))
+        print ('%s == %s' %(key, value))
  
-myFun(first ='Geeks', mid ='for', last='Geeks') 
+myFun1(first='Geeks', mid='for', last='Geeks') 
+print()
+myFun1(**{'first':'Geeks', 'mid':'for', 'last':'Geeks'})
 print()
 
 
-
-### arg and Kwargs ###
-
-def myFun(arg1, **kwargs):
+def myFun2(arg1, **kwargs):
     for key, value in kwargs.items():
         print(arg1)
-        print ("%s == %s" %(key, value))
+        print ('%s == %s' %(key, value))
  
-myFun("Hi", first ='Geeks', mid ='for', last='Geeks') 
+myFun2('Hello', first='Geeks', mid='for', last='Geeks') 
 print()
 
 
+def myFun3(*args,**kwargs):
+	print('args: ',   type(args),   args)
+	print('kwargs: ', type(kwargs), kwargs)
 
-### *args and **kwargs ###
-
-def myFun(*args,**kwargs):
-	print("args: ", args)
-	print("kwargs: ", kwargs)
-
-myFun('geeks',' for', 'geeks', first="Geeks", mid="for", last="Geeks")
+myFun3('geeks',' for', 'geeks', first='Geeks', mid='for', last='Geeks')
+print()
 
 
+print('---------- Function with Kwargs -------------')
+
+def connect(**kwargs):
+    print(type(kwargs), kwargs)
+	
+connect() 
+print()
+
+connect(server='localhost', port=3306, user='root', password='123')
+print()
 
 
-#################################  EDIT
+print('---------- Function with Kwargs - Pass a dictionary -------------')
+
+config = {'server':'localhost', 'port':3306, 'user':'root', 'password':'123'}
+
+connect(**config)
+print()
+
+
+print('---------- Class with Kwargs -------------')
 
 class Foo1:
     def __init__(self, **kwargs):
@@ -89,32 +95,3 @@ class MathematicalModel:
         self.var2 = var2
         self.var3 = var3
         self.__dict__.update(kwargs)  # Store all the extra variables
-
-#################################  EDIT
-
-def connect(**kwargs):
-    print(type(kwargs))
-    print(kwargs)
-	
-	
-connect() 
-# <class 'dict'>
-# {}
-
-connect(server='localhost', port=3306, user='root', password='Py1hon!Xt')
-# <class 'dict'>
-# {'server': 'localhost', 'port': 3306, 'user': 'root', 'password': 'Py1hon!Xt'}
-
-# If you want to pass a dictionary to the function, you need to add two stars (**) to the argument like this:
-
-def connect(**kwargs):
-    print(kwargs)
-
-config = {'server': 'localhost',
-        'port': 3306,
-        'user': 'root',
-        'password': 'Py1thon!Xt12'}
-
-connect(**config)
-
-
