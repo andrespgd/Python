@@ -3,7 +3,7 @@ class Dog():
     kind = 'canine'
     extinction = False
     def __init__(self, name, age, breed=None):
-        # attributes
+        # attributes or attributes
         self.name = name
         self.age = age
         self.breed = breed
