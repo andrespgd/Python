@@ -1,6 +1,8 @@
 import os
 import random
 import glob
+
+
 # 1 - create a directory
 dir_path = r'c:\tmp100'
 
