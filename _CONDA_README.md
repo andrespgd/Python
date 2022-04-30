@@ -1,37 +1,30 @@
 ## Conda for Linux 
 
-1- download .sh from Anaconda site
+- download .sh from Anaconda site
 
-2-
 ```
 chmod 755 Anaconda3-2019.07-Linux-x86_64.sh
-```
-3-
-```
 ./Anaconda3-2019.07-Linux-x86_64.sh
 ```
->will install ./anaconda3/bin/conda
 
-## update Conda
+
+## Update
 ```
 conda --version
 conda update conda
 ```
 
 
-## create a python3.7 environment
+## Create environment
 
 1- create environment
 ```
-conda create -n p37 numpy scipy pandas scikit-learn notebook spyder
-```
-2-
-```
-conda activate p37
+conda create -n p310 numpy scipy pandas scikit-learn notebook spyder python=3.10
+conda activate p310
 conda deactivate
 ```
 
-3-
+2- Check environments
 ```
 conda env list
 ```
@@ -41,6 +34,25 @@ conda env list
 
 >py37                     /home/a1/anaconda3/envs/py37
 
+
+## How to view the path to the conda environment
+
+</br>Linux:
+```
+source activate python35
+echo $CONDA_PREFIX
+```
+
+</br>Windows:
+```
+conda activate python35
+echo %CONDA_PREFIX%
+```
+
+</br>To show paths to all your environments
+```
+conda info --envs
+```
 
 ## install additional packages
 
@@ -85,10 +97,7 @@ OR
 % conda list -n conda-env
 ```
 
+## Setup an existing conda env to PyCharm
 
-## NOTES
+[Conda on Pycharm](https://medium.com/infinity-aka-aseem/how-to-setup-pycharm-with-an-anaconda-virtual-environment-already-created-fb927bacbe61)
 
--Whereas pip only installs Python packages from PyPI, conda can both
-
-    Install packages (written in any language) from repositories like Anaconda Repository and Anaconda Cloud.
-    Install packages from PyPI by using pip in an active Conda environment.
