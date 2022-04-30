@@ -20,7 +20,7 @@ class Dog():
         self.tricks.append(trick)
         
         
-print('Create Yuyo')
+print('\n Create Yuyo')
 yuyo = Dog('yuyo', 10)
 print(vars(yuyo))
 yuyo.get_name()          
@@ -30,9 +30,8 @@ print(yuyo.tricks)
 print(vars(yuyo))
 yuyo.vaccines.append('distemper')
 print(vars(yuyo))
-print()
 
-print('Create Matias')
+print('\n Create Matias')
 matias = Dog('matias', 5, 'Poodle')
 print(vars(matias))
 # create a new attribute for an instance
@@ -40,19 +39,24 @@ matias.playful = True
 print(vars(matias))
 print()
 
-print('Change a class variable for an instance only')
+print('\n Change a class variable for an instance only')
 matias.extinction = True
 print(yuyo.extinction)
 print(matias.extinction)
 print()
 
-print('Change a class variable for ALL members of the class')
+print('\n Change a class variable for ALL members of the class')
 Dog.kind = 'cat'
 print(yuyo.kind)
 print(matias.kind)
 
-print()
-print(vars(yuyo))
+print('\n', vars(yuyo))
 
-print()
-print(vars(matias))
+print('\n', vars(matias))
+
+print('\n Class variables and methods using "dir()" ')
+print(dir(Dog))
+
+
+print('\n Instance variables and methods using "dir()" ')
+print(dir(yuyo))
