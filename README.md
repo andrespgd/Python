@@ -32,3 +32,24 @@ for k, v in d.iteritems():
     print(k, '-->', v)
 ```
 <br /><br />
+
+
+Simultaneous state updates<br />
+Instead of:
+```
+tmp_x = x + dx * t
+tmp_y = y + dy * t
+tmp_dx = influence(m, x, y ,dx, dy, partial='x')
+tmp_dy = influence(m, x, y ,dx, dy, partial='y')
+x = tmp_x
+y = tmp_y
+dx = tmp_dx
+dy = tmp_dy
+```
+Use this format (just like you would in Excel):
+```
+x, y, dx, dy = (x + dx * t,
+                y + dy * t,
+                influence(m, x, y ,dx, dy, partial='x'),
+                influence(m, x, y ,dx, dy, partial='y'))
+```
