@@ -53,3 +53,8 @@ x, y, dx, dy = (x + dx * t,
                 influence(m, x, y ,dx, dy, partial='x'),
                 influence(m, x, y ,dx, dy, partial='y'))
 ```
+<br /><br />
+
+
+Functors use in Python:
+https://www.geeksforgeeks.org/functors-use-python/
