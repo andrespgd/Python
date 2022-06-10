@@ -74,6 +74,9 @@ arr = sys.argv[1].split(',')
 print(arr[2])
 ```
 
+# NUMPY
+https://www.dataquest.io/blog/numpy-cheat-sheet/
+
 # SKLEARN
 sklearn fit and transform - μ and σ
 https://datascience.stackexchange.com/questions/12321/difference-between-fit-and-fit-transform-in-scikit-learn-models 
