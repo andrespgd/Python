@@ -16,7 +16,8 @@ twitter_search('@trump', retweets=False, numtweets=20, popular=True)
 <br /><br />
 
 
-Looping over a dictionary keys and values .Simplest way (inefficient):
+## Dictionary
+Looping over keys and values .Simplest way (inefficient):
 ```
 for k in d:
     print(k, '-->', d[k])
@@ -34,7 +35,7 @@ for k, v in d.iteritems():
 <br /><br />
 
 
-Simultaneous state updates<br />
+## Simultaneous state updates
 Instead of:
 ```
 tmp_x = x + dx * t
@@ -53,7 +54,6 @@ x, y, dx, dy = (x + dx * t,
                 influence(m, x, y ,dx, dy, partial='x'),
                 influence(m, x, y ,dx, dy, partial='y'))
 ```
-<br /><br />
 
 
 Functors use in Python:
