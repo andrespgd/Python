@@ -89,13 +89,53 @@ fit_transform() joins these two steps and is used for the initial fitting of par
 
 x′. Internally, it just calls first fit() and then transform() on the same data.
 
-
+# MATPLOTLIB
+## No block plots
+Use:
+```
+plt.show(block=True)
+plt.pause(1.0)
+plt.close()
+```
 
 # PANDAS
 ## Bitwise Operators for Pandas
 https://towardsdatascience.com/bitwise-operators-and-chaining-comparisons-in-pandas-d3a559487525
 ## ILOC causes warnings
 instead of using df.iloc , use df[df.isin(list_of_rows)]
+## Create categorical values
+```
+df['school_level'] = pd.Categorical(df['school_level'], categories=['elem','middle','high'], ordered=True]
+```
+# Sort values on the fly
+```
+df.sort_values(by=['gender','age','height'], inplace=True)
+```
+
+# OS.System VS. SUBPROCESS
+```
+command='ls -l'
+os.system(command)
+```
+VS.
+```
+proc= subprocess.Popen(command, shell=True, std=subprocess.PIPE)
+print('the command is', proc.args)
+proc.wait()
+print(proc.returncode)
+```
+
+# DATACLASS
+Can be used in place of a C++ Struct
+```
+from dataclasses import dataclass
+@dataclass
+class Vehicle:
+    n_wheels: int
+    mass:     float
+    brand:    str
+```
+https://realpython.com/python-data-classes/
 
 
 # OTHER
