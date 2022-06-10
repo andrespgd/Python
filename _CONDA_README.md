@@ -101,3 +101,22 @@ OR
 
 [Conda on Pycharm](https://medium.com/infinity-aka-aseem/how-to-setup-pycharm-with-an-anaconda-virtual-environment-already-created-fb927bacbe61)
 
+# Pycharm - Setup Conda Environment
+
+CTRL+ALT+S
+
+V Project ...
+
+Python Interpreter
+
+* Add
+
+Conda Environment
+ 
+(*) Existing Environment
+
+-Interpreter: c:\users....python.exe
+
+-Conda Executable: c:\conda3\scripts\conda.exe (do NOT use _conda.exe, will cause errors!!)
+
+(*) make available to all projects
