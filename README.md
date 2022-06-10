@@ -58,3 +58,14 @@ x, y, dx, dy = (x + dx * t,
 
 Functors use in Python:
 https://www.geeksforgeeks.org/functors-use-python/
+
+
+
+
+PANDAS
+
+======
+
+Bitwise Operators for Pandas
+
+https://towardsdatascience.com/bitwise-operators-and-chaining-comparisons-in-pandas-d3a559487525
