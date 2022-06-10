@@ -62,10 +62,6 @@ https://www.geeksforgeeks.org/functors-use-python/
 
 
 
-PANDAS
-
-======
-
-Bitwise Operators for Pandas
-
+#PANDAS
+##Bitwise Operators for Pandas
 https://towardsdatascience.com/bitwise-operators-and-chaining-comparisons-in-pandas-d3a559487525
