@@ -60,6 +60,32 @@ Functors use in Python:
 https://www.geeksforgeeks.org/functors-use-python/
 
 
+# ARGs
+The elements of argv are strings, they're not parsed like literals in the program.
+
+You should just pass a comma-separated string (without the brackets):
+```
+python3 test.py 1,2,3,4,5 0
+```
+and then use split() to convert it to an array.
+```
+import sys
+arr = sys.argv[1].split(',')
+print(arr[2])
+```
+
+# SKLEARN
+sklearn fit and transform - μ and σ
+https://datascience.stackexchange.com/questions/12321/difference-between-fit-and-fit-transform-in-scikit-learn-models 
+
+very sklearn's transform's fit() just calculates the parameters (e.g. μμ and σσ in case of StandardScaler) and saves them as an internal objects state.
+
+Afterwards, you can call its transform() method to apply the transformation to a particular set of examples.
+
+fit_transform() joins these two steps and is used for the initial fitting of parameters on the training set xx, but it also returns a transformed x′
+
+x′. Internally, it just calls first fit() and then transform() on the same data.
+
 
 
 # PANDAS
