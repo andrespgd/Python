@@ -67,3 +67,9 @@ https://www.geeksforgeeks.org/functors-use-python/
 https://towardsdatascience.com/bitwise-operators-and-chaining-comparisons-in-pandas-d3a559487525
 ## ILOC causes warnings
 instead of using df.iloc , use df[df.isin(list_of_rows)]
+
+
+# OTHER
+
+SMOP to translate Matlab- > Python
+
