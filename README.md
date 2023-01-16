@@ -1,9 +1,13 @@
 Literal Strings: 
 
 -are surrounded by single quotes
+
 -no escaping is performed
+
 -what you see is what you get
+
 -Examples
+
 ```
 r'C:\tmp\'
 ```
