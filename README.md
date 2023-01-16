@@ -1,3 +1,15 @@
+Literal Strings: 
+
+-are surrounded by single quotes
+-no escaping is performed
+-what you see is what you get
+-Examples
+```
+r'C:\tmp\'
+```
+
+
+
 Instead of zip instead of izip. Stays in memory ( faster for long lists):
 ```
 izip(list1, list2)
