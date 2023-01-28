@@ -38,15 +38,10 @@ Looping over keys and values .Simplest way (inefficient):
 for k in d:
     print(k, '-->', d[k])
 ```
-If using this way it has to re-hash the dictionary in every iteration:
+Use this for Python3 (same as iteritems in python2.7)
 ```
 for k, v in d.items():
     print(k, '-->>', v)
-```
-If  using this form, it stays in memory:
-```
-for k, v in d.iteritems():
-    print(k, '-->', v)
 ```
 <br /><br />
 
