@@ -1,9 +1,9 @@
-// main.cpp
-import helloworld; // import declaration
+// helloworld.cpp
+export module helloworld; // module declaration
  
-int main()
+import <iostream>;        // import declaration
+ 
+export void hello()       // export declaration
 {
-    hello();
+    std::cout << "Hello world!\n";
 }
-
-// NOTE: compilation does NOT work yet. Modules not fully impletmented in GCC c++20
