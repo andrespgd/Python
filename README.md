@@ -7,7 +7,7 @@ Examples
 r'C:\tmp\'
 ```
 
-## SORTING
+## Sorting
 * .sort() function  makes changes inplace  AND for case insensitive use: .sort(key=str.lower)
 * sorted() function creates a new sequence AND for case insensitive use: sorted_list = sorted(unsorted_list, key=str.casefold)
 ```
@@ -26,7 +26,7 @@ will return:
 ```
 
 
-# Function Clarity
+## Function Clarity
 use keywoard arguments. Kwargs help understanding the code. Instead of:
 ```
 twitter_search('@trump', False, 20, True)
@@ -36,7 +36,7 @@ Use:
 twitter_search('@trump', retweets=False, numtweets=20, popular=True)
 ```
 
-## Dictionary
+## Dictionaries
 Looping over keys and values .Simplest way (inefficient):
 ```
 for k in d:
@@ -70,7 +70,7 @@ x, y, dx, dy = (x + dx * t,
 ```
 
 
-# ARGs
+## ARGs
 * the elements of argv are strings
 * they're not parsed like literals in the program.
 * you should just pass a comma-separated string (without the brackets)
@@ -89,23 +89,29 @@ python program.py "D:\Users\John\Desktop\Folder Name" 100
 ```
 The args above will be 3: program.py, the path, AND 100
 
-# SHUTIL
+## SHUTIL
 * copy2() method in Python is used to copy the content of source file to destination file or directory
 * identical to shutil. copy() method 
 * but it also try to preserves the file's metadata
 
-# OS
+## OS
 * getcwd()
 * chdir()
-
 https://levelup.gitconnected.com/10-python-os-module-functions-that-you-should-know-a320aba36c87
+* OS.System VS. SUBPROCESS
+```
+command='ls -l'
+os.system(command)
+```
+VS.
+```
+proc= subprocess.Popen(command, shell=True, std=subprocess.PIPE)
+print('the command is', proc.args)
+proc.wait()
+print(proc.returncode)
+```
 
-
-
-# NUMPY
-https://www.dataquest.io/blog/numpy-cheat-sheet/
-
-# SKLEARN
+## SKLEARN
 * sklearn fit and transform - μ and σ
 https://datascience.stackexchange.com/questions/12321/difference-between-fit-and-fit-transform-in-scikit-learn-models 
 
@@ -116,9 +122,8 @@ https://datascience.stackexchange.com/questions/12321/difference-between-fit-and
 * but it also returns a transformed x′
 * internally, it just calls first fit() and then transform() on the same data.
 
-# MATPLOTLIB
-## No block plots
-Use:
+## MATPLOTLIB
+For NO block plots use:
 ```
 plt.show(block=True)
 plt.pause(1.0)
@@ -143,20 +148,7 @@ df['on_or_off'] = df['on_or_off'].astype('category')
 df.sort_values(by=['gender','age','height'], inplace=True)
 ```
 
-# OS.System VS. SUBPROCESS
-```
-command='ls -l'
-os.system(command)
-```
-VS.
-```
-proc= subprocess.Popen(command, shell=True, std=subprocess.PIPE)
-print('the command is', proc.args)
-proc.wait()
-print(proc.returncode)
-```
-
-# DATACLASS
+## DATACLASS
 Can be used in place of a C++ Struct
 ```
 from dataclasses import dataclass
@@ -166,6 +158,3 @@ class Vehicle:
     mass:     float
     brand:    str
 ```
-https://realpython.com/python-data-classes/
-
-
