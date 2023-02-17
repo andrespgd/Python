@@ -83,6 +83,11 @@ import sys
 arr = sys.argv[1].split(',')
 print(argv[2])
 ```
+If there is a space (such as in a path), the argument needs to start/end with double-quotes(")
+```
+python program.py "D:\Users\John\Desktop\Folder Name" 100
+```
+The args above will be 3: program.py, the path, AND 100
 
 # SHUTIL
 * copy2() method in Python is used to copy the content of source file to destination file or directory
