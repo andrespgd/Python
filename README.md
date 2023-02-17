@@ -134,12 +134,12 @@ plt.close()
 ## Bitwise Operators for Pandas
 https://towardsdatascience.com/bitwise-operators-and-chaining-comparisons-in-pandas-d3a559487525
 ## ILOC causes warnings
-instead of using df.iloc , use df[df.isin(list_of_rows)]
+instead of using df.iloc use: df.index.isin([0,2,3])
 ## Create categorical values
 ```
 df['school_level'] = pd.Categorical(df['school_level'], categories=['elem','middle','high'], ordered=True]
 ```
-## Or if you have a column with 0s and 1s as integers, can be converted automatically to 2 categories
+## Column with 0s and 1s as integers: convert to 2 categories
 ```
 df['on_or_off'] = df['on_or_off'].astype('category')
 ```
