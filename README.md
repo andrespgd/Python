@@ -176,4 +176,16 @@ class Person:
  - No need to write comparison methods
 
 
+## MySQL sqlalchemy
+```
+engine = sqlalchemy.create_engine('mysql+pymysql://username:password@localhost:3306/db_name')
 
+query = '''
+SELECT * FROM table_name
+'''
+df = pd.read_sql_query(query, engine)
+print(df)
+```
+* There is a way to wrap/check query with sqlalchemy function, use:
+* You can only do 1 query at a time with this method!!!!
+    * for example you CANNOT do: SELECT * blah blah ; SELECT * blah blah.....; etc
