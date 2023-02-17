@@ -162,6 +162,6 @@ class Vehicle:
 ## MARKDOWN TEST
 1st line
 2nd line
-* using backslash to create a new line
+* using backslash to create a new line \
 1st line \
 2nd line
