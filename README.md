@@ -13,6 +13,24 @@ r'C:\tmp\'
 ```
 
 
+SORTING
+* .sort() function  makes changes inplace  AND for case insensitive use: .sort(key=str.lower)
+* sorted() function creates a new sequence AND for case insensitive use: sorted_list = sorted(unsorted_list, key=str.casefold)
+```
+list1 = ['B','a']
+print(list1)
+list1.sort()
+print(list1)
+list1.sort(key=str.lower)
+print(list1)
+```
+will return:
+```
+['B', 'a']
+['B', 'a']
+['a', 'B']
+```
+
 
 Instead of zip instead of izip. Stays in memory ( faster for long lists):
 ```
