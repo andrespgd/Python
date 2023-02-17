@@ -149,7 +149,11 @@ df.sort_values(by=['gender','age','height'], inplace=True)
 ```
 
 ## DATACLASS
-Can be used in place of a C++ Struct
+- similar to C++ Struct
+- easily work with classes that act as data containers
+    - can do methods, but DON'T use them, keep it simple
+- less code to define a class
+- support for default values
 ```
 from dataclasses import dataclass
 @dataclass
@@ -158,5 +162,18 @@ class Vehicle:
     mass:     float
     brand:    str
 ```
+- easy conversion to a tuple or a dictionary
+- frozen instances / immutable objects
+    - prevent anyone from modifying the values of the attributes once the object is instantiated
+```
+@dataclass(frozen=True)
+class Person:
+     first_name: str = "John"
+     last_name: str = "Smith"
+     age: int = 40
+     job: str = "Engineer"
+ ```
+ - No need to write comparison methods
+
 
 
