@@ -159,9 +159,17 @@ class Vehicle:
     brand:    str
 ```
 
-## MARKDOWN TEST
+## MARKDOWN NEW Line
 1st line
 2nd line
-* using backslash to create a new line \
+* using backslash to create a new line
+
 1st line \
 2nd line
+
+## MARKDOWN Dashes
+- line1
+- line2
+- line3
+
+end of the dash lines
