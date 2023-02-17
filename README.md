@@ -13,7 +13,7 @@ r'C:\tmp\'
 ```
 
 
-SORTING
+##SORTING
 * .sort() function  makes changes inplace  AND for case insensitive use: .sort(key=str.lower)
 * sorted() function creates a new sequence AND for case insensitive use: sorted_list = sorted(unsorted_list, key=str.casefold)
 ```
