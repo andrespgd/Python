@@ -1,19 +1,13 @@
-Literal Strings: 
-
--are surrounded by single quotes
-
--no escaping is performed
-
--what you see is what you get
-
--Examples
-
+## Literal Strings: 
+* are surrounded by single quotes
+* no escaping is performed
+* what you see is what you get
+Examples
 ```
 r'C:\tmp\'
 ```
 
-
-##SORTING
+## SORTING
 * .sort() function  makes changes inplace  AND for case insensitive use: .sort(key=str.lower)
 * sorted() function creates a new sequence AND for case insensitive use: sorted_list = sorted(unsorted_list, key=str.casefold)
 ```
@@ -32,14 +26,8 @@ will return:
 ```
 
 
-Instead of zip instead of izip. Stays in memory ( faster for long lists):
-```
-izip(list1, list2)
-```
-<br /><br />
-
-
-Always clarify functions with keywoard arguments. Kwargs help understanding the code. Instead of:
+# Function Clarity
+use keywoard arguments. Kwargs help understanding the code. Instead of:
 ```
 twitter_search('@trump', False, 20, True)
 ```
@@ -47,8 +35,6 @@ Use:
 ```
 twitter_search('@trump', retweets=False, numtweets=20, popular=True)
 ```
-<br /><br />
-
 
 ## Dictionary
 Looping over keys and values .Simplest way (inefficient):
@@ -61,10 +47,9 @@ Use this for Python3 (same as iteritems in python2.7)
 for k, v in d.items():
     print(k, '-->>', v)
 ```
-<br /><br />
 
 
-## Simultaneous state updates
+## Simultaneous State Updates (Just like Excel)
 Instead of:
 ```
 tmp_x = x + dx * t
@@ -85,14 +70,10 @@ x, y, dx, dy = (x + dx * t,
 ```
 
 
-Functors use in Python:
-https://www.geeksforgeeks.org/functors-use-python/
-
-
 # ARGs
-The elements of argv are strings, they're not parsed like literals in the program.
-
-You should just pass a comma-separated string (without the brackets):
+* the elements of argv are strings
+* they're not parsed like literals in the program.
+* you should just pass a comma-separated string (without the brackets)
 ```
 python3 test.py 1,2,3,4,5 0
 ```
@@ -100,15 +81,17 @@ and then use split() to convert it to an array.
 ```
 import sys
 arr = sys.argv[1].split(',')
-print(arr[2])
+print(argv[2])
 ```
 
 # SHUTIL
-copy2() method in Python is used to copy the content of source file to destination file or directory. This method is identical to shutil. copy() method but it also try to preserves the file's metadata
+* copy2() method in Python is used to copy the content of source file to destination file or directory
+* identical to shutil. copy() method 
+* but it also try to preserves the file's metadata
 
 # OS
-getcwd()
-chdir()
+* getcwd()
+* chdir()
 
 https://levelup.gitconnected.com/10-python-os-module-functions-that-you-should-know-a320aba36c87
 
@@ -118,16 +101,15 @@ https://levelup.gitconnected.com/10-python-os-module-functions-that-you-should-k
 https://www.dataquest.io/blog/numpy-cheat-sheet/
 
 # SKLEARN
-sklearn fit and transform - μ and σ
+* sklearn fit and transform - μ and σ
 https://datascience.stackexchange.com/questions/12321/difference-between-fit-and-fit-transform-in-scikit-learn-models 
 
-very sklearn's transform's fit() just calculates the parameters (e.g. μμ and σσ in case of StandardScaler) and saves them as an internal objects state.
-
-Afterwards, you can call its transform() method to apply the transformation to a particular set of examples.
-
-fit_transform() joins these two steps and is used for the initial fitting of parameters on the training set xx, but it also returns a transformed x′
-
-x′. Internally, it just calls first fit() and then transform() on the same data.
+* sklearn's transform's fit() just calculates the parameters 
+* and saves them as an internal objects state.
+* afterwards, you can call its transform() method to apply the transformation to a particular set of examples.
+* fit_transform() joins these two steps and is used for the initial fitting of parameters on the training set xx, 
+* but it also returns a transformed x′
+* internally, it just calls first fit() and then transform() on the same data.
 
 # MATPLOTLIB
 ## No block plots
@@ -138,7 +120,7 @@ plt.pause(1.0)
 plt.close()
 ```
 
-# PANDAS
+# PANDAS DataFrame
 ## Bitwise Operators for Pandas
 https://towardsdatascience.com/bitwise-operators-and-chaining-comparisons-in-pandas-d3a559487525
 ## ILOC causes warnings
@@ -146,6 +128,10 @@ instead of using df.iloc , use df[df.isin(list_of_rows)]
 ## Create categorical values
 ```
 df['school_level'] = pd.Categorical(df['school_level'], categories=['elem','middle','high'], ordered=True]
+```
+## Or if you have a column with 0s and 1s as integers, can be converted automatically to 2 categories
+```
+df['on_or_off'] = df['on_or_off'].astype('category')
 ```
 # Sort values on the fly
 ```
@@ -177,9 +163,4 @@ class Vehicle:
 ```
 https://realpython.com/python-data-classes/
 
-
-
-# OTHER
-
-SMOP to translate Matlab- > Python
 
