@@ -1,10 +1,12 @@
-## Literal Strings: 
-* are surrounded by single quotes
+## Raw Strings: 
+* use when there is a **space** in a path
+* start with r' or r"
+* treat backslashes \ as literal characters
 * no escaping is performed
 * what you see is what you get
-Examples
 ```
-r'C:\tmp\'
+r'C:\Users\John\My Documents'
+r"C:\Program Files (x86)\WinRar\Rar.exe"
 ```
 
 ## Sorting
