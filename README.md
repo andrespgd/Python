@@ -9,6 +9,16 @@ r'C:\Users\John\My Documents'
 r"C:\Program Files (x86)\WinRar\Rar.exe"
 ```
 
+## Unicode
+```
+print("here is your checkmark: " + u'\u2713')
+```
+Will print:
+```
+$ python test.py
+here is your checkmark: ✓
+```
+
 ## Sorting
 * .sort() function  makes changes inplace  AND for case insensitive use: .sort(key=str.lower)
 * sorted() function creates a new sequence AND for case insensitive use: sorted_list = sorted(unsorted_list, key=str.casefold)
