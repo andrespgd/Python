@@ -1,5 +1,4 @@
 ## SOURCE: https://www.datacamp.com/community/tutorials/deep-learning-python#gs.8aUP2A0
-
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -14,7 +13,7 @@ import tensorflow as tf
 white = pd.read_csv('http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv', sep=';')
 red   = pd.read_csv('http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv', sep=';')
 
-##################################################### DATA EXPLORATION
+############### DATA EXPLORATION
 
 # Print info on white wine
 print(white.info())
