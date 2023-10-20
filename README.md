@@ -1,3 +1,6 @@
+## Install a package inside environment
+python -m pip install
+
 ## Raw Strings: 
 * use when there is a **space** in a path
 * start with r' or r"
