@@ -1,0 +1,67 @@
+SQLite vs MySQL vs PostgreSQL
+
+If you're interested in the "industry standard" I strongly suggest looking at PostgreSQL over MySQL 
+- it is a lot more fully featured with regard to the various SQL specifications and 
+-will teach you more about databases as a result.
+
+If you plan on building applications that run on a laptop, 
+    -SQLite is more interesting than MySQL (or PostgreSQL) 
+	- since it works as a library it's much easier to bundle with the rest of your code.
+
+If you plan to get into web engineering a server-oriented database like MySQL or PostgreSQL 
+will usually serve you better 
+though SQLite works great for most web applications
+
+Don't be fooled by SQLite, it's present everywhere: in your browser, in your phone, in applications. 
+
+It is a full-blown relational database, just an embedded one.
+
+The big difference with MySQL is that MySQL is a database server, like almost every other database. 
+
+Apart from that, relational databases are very much alike. SQL, modelling, JOIN queries, transactions etc. are very similar for each database. Migration is generally easy when you stick to standard SQL queries and data types. When using good libraries (such as SqlAlchemy) the cost of migration can even be (close to) zero.
+
+I've done a lot of work with Python/SqlAlchemy lately (coming from a C++/C# background), 
+and have become a huge fan. 
+I usually use SQLite for development/ unit testing, and use PostgreSQL in production. 
+That works really well (some caveats of course).
+
+
+A database engine is a piece of code that 
+reads and writes data to files on disk in a special way that is fast and has some features.
+
+Now SQLite is a library that does that. 
+You specify a file path, it will create it and 
+you can do whatever you do in a database (design, relations, SQL commands, etc.)
+
+Notice that SQLite is a library, not a program. 
+It uses the user's machine to process the data and stores it on the user's disk. 
+It is good for storing the app's configuration data or any other user-side data.
+
+Mysql and other hosted databases are programs. 
+There is a database engine and a web server in them. 
+Meaning to work with them, you don't include the entire engine in your code, 
+but rather, the engine and all the data is hosted somewhere on a server, 
+and you connect to that server over the internet. 
+There are libraries called Connectors which make receiving and sending things to that server easier. 
+These databases store and process data on the server and to retrieve any data, 
+you need to download it from the server. 
+These databases are good for storing synced/shared data 
+or any other form of server-side data that is accessed 
+from somewhere else than the machine where the data is actually stored. 
+You can have MySQL on the user's machine too since a server can be run 
+on the same machine as the client, and to access it you just connect to localhost, 
+but I personally don't do that since having a client-server architecture 
+with a client on the same machine just wastes processing power. 
+However, some apps that have really large data use that 
+since the database engine in hosted databases is apparently stronger than embedded ones, 
+due to them usually being used in industry-grade scenarios.
+
+To start, 
+go with SQLite since you don't need to bother with networking, authentication, etc 
+and you want to learn SQL and database design.
+
+
+But, keep in mind, that all are SQL databases, the language, features, design, etc. are all same. 
+It just has some minor differences sometimes. 
+There is no concept of learning MySQL or SQLite unless you mean learning their little minor differences. 
+Instead, you should learn SQL and SQL database design which is shared between all of these different SQL databases. (there are also NoSQL databases out there like MongoDB)
