@@ -11,3 +11,7 @@ with open('readline_vs_readlines.txt') as file:
 
 with open('readline_vs_readlines.txt') as file:  
     lines3 = file.read()
+
+import pathlib
+p = 'readline_vs_readlines.txt'
+p.read_text(encoding='UTF-8' )
