@@ -52,15 +52,15 @@ twitter_search('@trump', retweets=False, numtweets=20, popular=True)
 ```
 
 ## Dictionaries
-Looping over keys and values .Simplest way (inefficient):
-```
-for k in d:
-    print(k, '-->', d[k])
-```
-Use this for Python3 (same as iteritems in python2.7)
+for Python3 (same as iteritems in python2.7)
 ```
 for k, v in d.items():
     print(k, '-->>', v)
+```
+to get the keys and values as lists:
+```
+d.keys()
+d.values()
 ```
 
 
