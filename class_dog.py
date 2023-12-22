@@ -60,3 +60,9 @@ print(dir(Dog))
 
 print('\n Instance variables and methods using "dir()" ')
 print(dir(yuyo))
+
+print('\n Print all instances of a class')
+import gc
+for obj in gc.get_objects():
+    if isinstance(obj, Dog):
+        print(obj.name, obj)
