@@ -85,10 +85,12 @@ x, y, dx, dy = (x + dx * t,
 ```
 
 
-## ARGs
+## SYS ARGs
 * the elements of argv are strings
-* they're not parsed like literals in the program.
-* you should just pass a comma-separated string (without the brackets)
+* Python expect arguments separated by spaces
+* they're not parsed like literals in the program
+* sys.argv[0] is the fname of the Python file
+* if you want to pass comma separated arguments, you should just pass a comma-separated string (without the brackets)
 ```
 python3 test.py 1,2,3,4,5 0
 ```
