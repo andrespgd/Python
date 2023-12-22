@@ -13,6 +13,8 @@ project_name/
     |      |--- test_module2.py
     |      |--- ...
     |
+    |--- data/
+    |
     |--- setup.py
     |--- requirements.txt
     |--- README.md
