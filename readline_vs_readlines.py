@@ -7,11 +7,12 @@ with open('readline_vs_readlines.txt') as file:
     lines = file.read()
     
 with open('readline_vs_readlines.txt') as file:  
-    lines2 = file.readlines()
+    lines5 = file.readlines()
 
 with open('readline_vs_readlines.txt') as file:  
-    lines3 = file.read()
+    lines6 = file.read()
 
 import pathlib
-p = 'readline_vs_readlines.txt'
-p.read_text(encoding='UTF-8' )
+p = pathlib.Path('readline_vs_readlines.txt')
+lines7 = p.read_text(encoding='UTF-8' )
+lines7separated = lines7.splitlines()
