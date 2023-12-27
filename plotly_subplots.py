@@ -21,4 +21,6 @@ fig.add_trace(go.Scatter(x=x,y=cosx,name='cos',mode='lines',line=dict(color='red
 fig.add_trace(go.Scatter(x=x,y=cosx,name='cos',mode='lines',line=dict(color='blue')),row=2,col=1)
 fig.add_trace(go.Scatter(x=x,y=sinx,name='sin',mode='lines',line=dict(color='red')), row=2,col=1)
 #
+fig.update_layout(hovermode='x unified')
+#
 fig.write_html('plotly_subplots.html')

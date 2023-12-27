@@ -44,5 +44,5 @@ frames=[go.Frame(data=[go.Scatter(x=x[:i], y=y[:i],mode='lines')]) for i in rang
 fig.frames=frames
 
 # Show figure
-fig.show()
+# fig.show()
 fig.to_html('test3_plotly.html')
