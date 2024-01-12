@@ -1,0 +1,52 @@
+dir
+ll
+ls
+ls -l
+nano tmp.txt
+apt install nano
+sudo apt install nano
+nano tmp.txt
+ls
+more tmp.txt
+sudo apt install conda
+wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
+bash Anaconda3-2021.05-Linux-x86_64.sh
+conda
+ll
+dir
+more .bashrc
+source ~/.bashrc
+conda
+bash Anaconda3-2021.05-Linux-x86_64.sh
+bash Anaconda3-2021.05-Linux-x86_64.sh -u
+dir
+ls
+history
+wget https://repo.anaconda.com/archive/Anaconda3-2023.07-2-Linux-x86_64.sh
+ll
+dir
+bash Anaconda3-2023.07-2-Linux-x86_64.sh
+bash Anaconda3-2023.07-2-Linux-x86_64.sh  -u
+ll
+dir
+rm -fR anaconda3/
+bash Anaconda3-2023.07-2-Linux-x86_64.sh  
+conda update conda
+conda
+source .bashrc
+conda update conda
+conda create -n py311 python=3.11 numpy scipy matplotlib pandas spyder
+conda py311
+conda activate py311
+spyder
+pip install pyqt5
+conda install pyqtwebending
+conda install pyqtwebengine
+spyder
+conda uninstall spyder
+spyder
+pip install spyder
+spyder
+sudo apt install libnss3
+spyder
+history
