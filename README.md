@@ -164,6 +164,10 @@ df['on_or_off'] = df['on_or_off'].astype('category')
 ```
 df.sort_values(by=['gender','age','height'], inplace=True)
 ```
+# To convert column to a series
+```
+df['col1'].squeeze()
+```
 
 ## DATACLASS
 - similar to C++ Struct
