@@ -1,6 +1,20 @@
 ## Install a package inside environment
 python -m pip install
 
+## List comprehension
+```
+l1 = [(x,y) for x in [1,2,3] for y in [10,20,30]]
+
+l2 = [(x,y) for x, y in zip([1,2,3], [10,20,30])]
+
+l3 = [x**2 for x in [1,2,3,4,5] if x**2 < 10]
+
+#[(1, 10), (1, 20), (1, 30), (2, 10), (2, 20), (2, 30), (3, 10), (3, 20), (3, 30)]
+#[(1, 10), (2, 20), (3, 30)]
+#[1, 4, 9]
+```
+
+
 ## Raw Strings: 
 * use when there is a **space** in a path
 * start with r' or r"
