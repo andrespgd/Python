@@ -124,4 +124,11 @@ path.is_dir()
 path.is_file()
 
 
+# Python 3.13 walk
+```
+import pathlib
 
+for dirpath, dirnames, filenames in pathlib.Path(".").walk():
+    for filename in filenames:
+        print(os.path.join(dirpath, filename))
+```
