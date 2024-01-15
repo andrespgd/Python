@@ -21,3 +21,18 @@ y = [4, 5]
 z = x + y
 print(z)
 # [1, 2, 3, 4, 5]
+
+
+# flatten list
+```
+values = [[1,2,3],[4,5,6],[7,8,9]]
+import itertools
+values_flatten = itertools.chain.from_iterable(values)
+```
+
+
+# permutations
+```
+import itertools
+c = itertools.product((1,2,3), repeat=3)
+list(c)
