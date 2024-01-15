@@ -91,6 +91,10 @@ p.iterdir()
 
 import glob
 glob.glob('*.py')
+#
+glob.glob('**/*.py')
+#
+Path.cwd().rglob('MyCamelCase.exe').resolve()
 
 p.glob('*.py')
 for one_item in p.glob('*.py'):
@@ -107,3 +111,17 @@ all_csv_files = Path.cwd().rglob('*.txt')
 
 for i in all_csv_files:
     print(i)
+
+
+
+full_text = path.read_text()
+
+full_text_lines = full_text.splitlines()
+
+
+path.exists() 
+path.is_dir()
+path.is_file()
+
+
+
