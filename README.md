@@ -51,6 +51,24 @@ Use:
 twitter_search('@trump', retweets=False, numtweets=20, popular=True)
 ```
 
+## Datetime
+Can include UTC, depending on how the system is configured
+```
+import datetime
+datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc)
+```
+Parsing dates ISO 8601
+```
+datetime.datetime.fromisoformat('2019-01-04T16:41:24+02:00')
+```
+Timestamps are representation of a date in number of secs from a specific moment (such as GPS time)
+```
+import datetime
+ts = 1521110000
+d = datetime.datetime.utcfromtimestamp(ts)
+```
+
+
 ## Dictionaries
 for Python3 (same as iteritems in python2.7)
 ```
