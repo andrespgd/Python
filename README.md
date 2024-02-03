@@ -242,3 +242,9 @@ print(df)
 * There is a way to wrap/check query with sqlalchemy function, use:
 * You can only do 1 query at a time with this method!!!!
     * for example you CANNOT do: SELECT * blah blah ; SELECT * blah blah.....; etc
+
+## Start a web-server for current directory from command line
+```
+python -m http.server
+```
+Will show all the directories on folders
