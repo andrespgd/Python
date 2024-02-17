@@ -1,6 +1,9 @@
 ## Install a package inside environment
 python -m pip install
 
+## Turn code into a flow diagram
+python -m pyflowchart my_code.py -o my_code.html
+
 ## List comprehension
 ```
 l1 = [(x,y) for x in [1,2,3] for y in [10,20,30]]
