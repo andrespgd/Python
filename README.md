@@ -204,7 +204,7 @@ df.sort_values(by=['gender','age','height'], inplace=True)
 df['col1'].squeeze()
 ```
 # Dealing with missing data NaN or NaT
-[Fill missing data]([https://website-name.com](https://www.youtube.com/shorts/-tcmWp76IYw))
+<[https://website-name.com](https://www.youtube.com/shorts/-tcmWp76IYw)>
 
 ## DATACLASS
 - similar to C++ Struct
